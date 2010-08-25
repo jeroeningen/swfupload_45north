@@ -68,7 +68,7 @@ function fileDialogComplete(numFilesSelected, numFilesQueued) {
 		}
 		
 		/* I want auto start the upload and I can do that here */
-		this.startUpload();
+		//this.startUpload();
 	} catch (ex)  {
         this.debug(ex);
 	}
@@ -109,7 +109,6 @@ function uploadSuccess(file, serverData) {
 		progress.setComplete();
 		progress.setStatus("Complete.");
 		progress.toggleCancel(false);
-
 	} catch (ex) {
 		this.debug(ex);
 	}
@@ -149,7 +148,7 @@ function uploadError(file, errorCode, message) {
 		case SWFUpload.UPLOAD_ERROR.FILE_CANCELLED:
 			// If there aren't any files left (they were all cancelled) disable the cancel button
 			if (this.getStats().files_queued === 0) {
-				document.getElementById(this.customSettings.cancelButtonId).disabled = true;
+				//document.getElementById(this.customSettings.cancelButtonId).disabled = true;
 			}
 			progress.setStatus("Cancelled");
 			progress.setCancelled();
@@ -169,8 +168,7 @@ function uploadError(file, errorCode, message) {
 
 function uploadComplete(file) {
 	if (this.getStats().files_queued === 0) {
-		document.getElementById(this.customSettings.cancelButtonId).disabled = true;
-		
+		//document.getElementById(this.customSettings.cancelButtonId).disabled = true;
 	}
 }
 
