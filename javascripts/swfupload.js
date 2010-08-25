@@ -126,7 +126,7 @@ SWFUpload.prototype.initSettings = function () {
 	// Upload backend settings
 	this.ensureDefault("upload_url", "");
 	this.ensureDefault("preserve_relative_urls", false);
-	this.ensureDefault("file_post_name", "[orderline][asset]");
+	this.ensureDefault("file_post_name", "[file]");
 	this.ensureDefault("post_params", {});
 	this.ensureDefault("use_query_string", false);
 	this.ensureDefault("requeue_on_error", false);
